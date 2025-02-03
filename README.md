@@ -21,20 +21,22 @@ git clone https://github.com/axshaman/emaildumper.git
 cd emaildumper
 ```
 
-===== AUTO INSTALL =====
+AUTO INSTALL
+
 📌 How to Use the Auto-Installer
 Run the script for installation:
-   `sh
+   ```sh
    chmod +x install.sh
    ./install.sh
-   `
+   ```
 
 Run the script for using later:
-   `sh
+   ```sh
    source myenv/bin/activate
    python fetch_and_archive.py
-   `
-===== MANUAL INSTALL =====
+   ```
+
+MANUAL INSTALL
 
 2. Setting up a Virtual Environment
 ```sh
