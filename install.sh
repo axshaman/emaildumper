@@ -38,10 +38,12 @@ pip install imapclient email-validator requests tqdm
 
 echo "✅ Installation complete!"
 echo "Run the script in manual mode:"
+echo "source myenv/bin/activate"
 echo "source myenv/Scripts/activate"
 echo "python dumper.py --manual"
 echo ""
 echo "Run the script in automatic mode after editing config.ini:"
+echo "source myenv/bin/activate"
 echo "source myenv/Scripts/activate"
 echo "nohup python dumper.py > log.txt 2>&1 &"
 echo ""
