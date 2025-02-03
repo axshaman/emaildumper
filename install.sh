@@ -16,8 +16,15 @@ if [ ! -d "myenv" ]; then
     python3 -m venv myenv
 fi
 
-# Активация виртуального окружения
-source myenv/bin/activate
+# Проверяем правильный путь к активации виртуального окружения
+if [ -f "myenv/bin/activate" ]; then
+    source myenv/bin/activate
+elif [ -f "myenv/Scripts/activate" ]; then
+    source myenv/Scripts/activate
+else
+    echo "❌ Ошибка: Не найден файл активации виртуального окружения!"
+    exit 1
+fi
 
 # Проверяем, активировалось ли окружение
 if [[ "$VIRTUAL_ENV" == "" ]]; then
@@ -31,9 +38,11 @@ pip install imapclient email-validator requests tqdm
 
 echo "✅ Installation complete!"
 echo "Run the script in manual mode:"
+echo "source myenv/Scripts/activate"
 echo "python dumper.py --manual"
 echo ""
 echo "Run the script in automatic mode after editing config.ini:"
+echo "source myenv/Scripts/activate"
 echo "nohup python dumper.py > log.txt 2>&1 &"
 echo ""
 echo "If you want exit from current env mode please enter: deactivate"
