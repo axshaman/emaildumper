@@ -30,10 +30,16 @@ Run the script for installation:
    ./install.sh
    ```
 
-Run the script for using later:
+Run the script for using later (if you will be edit config.ini):
    ```sh
    source myenv/bin/activate
-   python fetch_and_archive.py
+   python dumper.py
+   ```
+
+Run the script for using later (if you will be not edit config.ini):
+   ```sh
+   source myenv/bin/activate
+   python dumper.py --manual
    ```
 
 MANUAL INSTALL
