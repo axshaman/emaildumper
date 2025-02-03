@@ -4,14 +4,6 @@ Email Backup Script
 
 This Python script downloads all emails and attachments from an IMAP server, saves them locally, extracts contacts, and archives everything in `.7z` format.
 
-📦 Installation
-
-1. Clone the repository
-```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/email-backup-script.git
-cd email-backup-script
-```
-
 List Of Dependencies
 | Library         | Purpose |
 |---------------------|------------|
@@ -21,6 +13,28 @@ List Of Dependencies
 | tqdm           | Displays progress bars while downloading emails. |
 | p7zip-full     | Utility for `.7z` archive creation (needed on Linux). |
 
+📦 Installation
+
+1. Clone the repository
+```sh
+git clone https://github.com/axshaman/emaildumper.git
+cd emaildumper
+```
+
+===== AUTO INSTALL =====
+📌 How to Use the Auto-Installer
+Run the script for installation:
+   `sh
+   chmod +x install.sh
+   ./install.sh
+   `
+
+Run the script for using later:
+   `sh
+   source myenv/bin/activate
+   python fetch_and_archive.py
+   `
+===== MANUAL INSTALL =====
 
 2. Setting up a Virtual Environment
 ```sh
